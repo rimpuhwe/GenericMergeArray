@@ -4,9 +4,17 @@ import java.util.Arrays;
 
 public class GenericArrayUtility {
     /**
-     * this function takes to arrays of same <T> datatypes which is unknown and merge them together.
+     * this function takes to arrays of same <code>T</code> datatypes which is unknown and merge them together.
      * In this case, you use this function when you want to achieve one array which combines
-     * both of the two arrays inputted.
+     * both of the two arrays inputted.<br><br>
+     * To create a new array with length of combined array use:
+     * <code>
+     *      @return
+     *      T[] c;
+     *     @SuppressWarnings("unchecked"):
+     *     T[] c = (T[]) java.lang.reflect.Array.newInstance(arrayName.getClass().getComponentType(), array1.length + array2.length);
+     * </code>
+     *
      */
     public static <T> T[] mergeArrays(T[] a, T[] b){
 
