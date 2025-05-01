@@ -12,7 +12,9 @@ public class GenericArrayUtility {
 
         int i = a.length + b.length;
         int x = 0;
-        T[] c = new T [i];
+        @SuppressWarnings("unchecked")
+        T[] c = (T[]) java.lang.reflect.Array.newInstance(a.getClass().getComponentType(), a.length + b.length);
+
         if(a.length == 0 && b.length == 0){
             return null;
         }
