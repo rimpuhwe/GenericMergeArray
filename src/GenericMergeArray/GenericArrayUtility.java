@@ -12,18 +12,29 @@ public class GenericArrayUtility {
 
         int i = a.length + b.length;
         int x = 0;
-
         T[] c = new T [i];
-        for(int j = 0; j < i; j++){
-            if(j > a.length -1){
-                c[j] = b[x];
-                x++;
-
-            }
-            else{
-                c[j] = a[j];
-            }
+        if(a.length == 0 && b.length == 0){
+            return null;
         }
-        return Arrays.copyOf(c, i);
+        else if(a.length == 0){
+            return Arrays.copyOf(b,b.length);
+        }
+        else if(b.length == 0){
+            return Arrays.copyOf(a,a.length);
+        }
+        else{
+            for(int j = 0; j < i; j++){
+                if(j > a.length -1){
+                    c[j] = b[x];
+                    x++;
+
+                }
+                else{
+                    c[j] = a[j];
+                }
+            }
+            return Arrays.copyOf(c, i);
+
+        }
     }
 }
