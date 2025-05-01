@@ -2,14 +2,7 @@ package GenericMergeArray;
 
 import java.util.Arrays;
 
-public class MergeArray {
-    public static void main(String[] args) {
-        Integer[] arr1 = {1,2,3};
-        Integer[] arr2 = {};
-        System.out.println(Arrays.toString(mergeArrays(arr1 , arr2)));
-
-
-    }
+public class GenericArrayUtility {
     /**
      * this function takes to arrays of same <T> datatypes which is unknown and merge them together.
      * In this case, you use this function when you want to achieve one array which combines
