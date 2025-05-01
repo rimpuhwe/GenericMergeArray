@@ -16,7 +16,7 @@ public class GenericArrayUtility {
         T[] c = (T[]) java.lang.reflect.Array.newInstance(a.getClass().getComponentType(), a.length + b.length);
 
         if(a.length == 0 && b.length == 0){
-            return null;
+            return c;
         }
         else if(a.length == 0){
             return Arrays.copyOf(b,b.length);
